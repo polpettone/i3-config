@@ -79,7 +79,20 @@ set $ws9 "9"
 set $ws10 "10"
 
 # always open workspace 3 on HDMI2 if connected
-#workspace $ws3 output HDMI2
+
+workspace $ws10 output DisplayPort-0
+workspace $ws1 output DisplayPort-0
+workspace $ws2 output DisplayPort-0
+workspace $ws3 output DisplayPort-0
+
+workspace $ws4 output DisplayPort-3
+workspace $ws5 output DisplayPort-3
+workspace $ws6 output DisplayPort-3
+workspace $ws7 output DisplayPort-3
+
+workspace $ws8 output HDMI-A-0
+workspace $ws9 output HDMI-A-0
+
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
