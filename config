@@ -1,69 +1,22 @@
 set $mod Mod4
 
-font pango:monospace 8
-
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal
-bindsym $mod+Return exec terminator
+# change ESC with CAPS_LOCK
+exec_always --no-startup-id xmodmap -e "clear lock"
+exec_always --no-startup-id xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock"
+exec_always --no-startup-id xmodmap -e "keycode 66 = Escape NoSymbol Escape"
+exec_always ~/.config/start_home_setup.sh 
+exec_always guake
 
+font pango:monospace 8
 
-# kill focused window
-bindsym $mod+Shift+q kill
+gaps inner 20 
+gaps outer 1
 
-# start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
-
-# change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+odiaeresis focus right
-
-# alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
-
-# move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+odiaeresis move right
-
-# alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
-
-# split in horizontal orientation
-bindsym $mod+h split h
-
-# split in vertical orientation
-bindsym $mod+v split v
-
-# enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
-
-# change container layout (stacked, tabbed, toggle split)
-#bindsym $mod+s layout stacking
-#bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
-
-# toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
-
-# change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
-
-# focus the parent container
-bindsym $mod+a focus parent
-
-# focus the child container
-#bindsym $mod+d focus child
+# disable title bar of all windows
+for_window [class="^.*"] border pixel 1
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -88,9 +41,10 @@ set $ws18 "18"
 set $ws19 "19"
 set $ws20 "20"
 
-
 workspace $ws12 output HDMI-A-0
-workspace $ws11 output DisplayPort-4
+
+workspace $ws11 output DisplayPort-3
+workspace $ws20 output DisplayPort-3
 
 workspace $ws8 output DisplayPort-0
 workspace $ws9 output DisplayPort-0
@@ -103,8 +57,6 @@ workspace $ws4 output DisplayPort-1
 workspace $ws5 output DisplayPort-1
 workspace $ws6 output DisplayPort-1
 workspace $ws7 output DisplayPort-1
-
-
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -151,6 +103,48 @@ bindsym $mod+Shift+Control+8 move container to workspace $ws18
 bindsym $mod+Shift+Control+9 move container to workspace $ws19
 bindsym $mod+Shift+Control+0 move container to workspace $ws20
 
+
+
+
+# change focus
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+odiaeresis focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+h split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -184,31 +178,18 @@ mode "resize" {
 }
 
 
-gaps inner 20 
-gaps outer 1
 
  
-# change ESC with CAPS_LOCK
-exec_always --no-startup-id xmodmap -e "clear lock"
-exec_always --no-startup-id xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock"
-exec_always --no-startup-id xmodmap -e "keycode 66 = Escape NoSymbol Escape"
-
-
-# disable title bar of all windows
-for_window [class="^.*"] border pixel 1
-
-
-exec_always ~/.config/start_home_setup.sh 
-exec_always guake
-
-#bad performance 
-#exec_always picom
+bindsym $mod+Return exec terminator
+bindsym $mod+Shift+q kill
+bindsym $mod+d exec dmenu_run
 
 bindsym $mod+w resize set 1280 768
 bindsym $mod+r mode "resize"
 
 bindsym $mod+g exec --no-startup-id terminator -e 'vim $(mktemp)'; workspace $ws11
 bindsym $mod+s exec --no-startup-id terminator -e 'gnome-screenshot -a'; workspace $ws20
+bindsym $mod+a exec --no-startup-id terminator; workspace $ws20
 
 bindsym $mod+t exec ~/.config/i3/scripts/open_terminator.sh
 bindsym $mod+q exec i3lock -ti ~/Pictures/Wallpapers/brake-it.png
