@@ -49,7 +49,7 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+#bindsym $mod+s layout stacking
 #bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -183,17 +183,6 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-bindsym $mod+r mode "resize"
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-#bar {
-#        status_command i3status
-#	    tray_output primary
-#        font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-#        font pango:DejaVu Sans Mono 16
-#}
-
 
 gaps inner 20 
 gaps outer 1
@@ -204,19 +193,25 @@ exec_always --no-startup-id xmodmap -e "clear lock"
 exec_always --no-startup-id xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock"
 exec_always --no-startup-id xmodmap -e "keycode 66 = Escape NoSymbol Escape"
 
-bindsym $mod+m exec terminator --working-directory=/home/icke/.logbuch
-bindsym $mod+t exec ~/.config/i3/scripts/open_terminator.sh
-bindsym $mod+q exec i3lock -ti ~/Pictures/Wallpapers/brake-it.png
 
 # disable title bar of all windows
 for_window [class="^.*"] border pixel 1
 
 
-bindsym $mod+w resize set 1280 768
 exec_always ~/.config/start_home_setup.sh 
 exec_always guake
 
 #bad performance 
 #exec_always picom
+
+bindsym $mod+w resize set 1280 768
+bindsym $mod+r mode "resize"
+
+bindsym $mod+g exec --no-startup-id terminator -e 'vim $(mktemp)'; workspace $ws11
+bindsym $mod+s exec --no-startup-id terminator -e 'gnome-screenshot -a'; workspace $ws20
+
+bindsym $mod+t exec ~/.config/i3/scripts/open_terminator.sh
+bindsym $mod+q exec i3lock -ti ~/Pictures/Wallpapers/brake-it.png
+
 
 
