@@ -193,6 +193,7 @@ bindsym $mod+a exec --no-startup-id terminator; workspace $ws20
 
 bindsym $mod+t exec ~/.config/i3/scripts/open_terminator.sh
 bindsym $mod+q exec i3lock -ti ~/Pictures/Wallpapers/brake-it.png
-
+bindsym $mod+c exec ~/.config/i3/scripts/set-local-de.sh
+bindsym $mod+x exec ~/.config/i3/scripts/set-local-us.sh
 
 
