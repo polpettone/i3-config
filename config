@@ -42,21 +42,25 @@ set $ws18 "18"
 set $ws19 "19"
 set $ws20 "20"
 
-workspace $ws8 output DisplayPort-3
-workspace $ws9 output DisplayPort-3
-workspace $ws10 output DisplayPort-3
+set $widescreen DisplayPort-0
+set $2kscreen DisplayPort-3
+set $4kscreen DisplayPort-1
 
 
-workspace $ws7 output DisplayPort-1
-workspace $ws11 output DisplayPort-1
-workspace $ws20 output DisplayPort-1
+workspace $ws8 output $4kscreen
+workspace $ws9 output $4kscreen
+workspace $ws10 output $4kscreen
 
-workspace $ws1 output DisplayPort-0
-workspace $ws2 output DisplayPort-0
-workspace $ws3 output DisplayPort-0
-workspace $ws4 output DisplayPort-0
-workspace $ws5 output DisplayPort-0
-workspace $ws6 output DisplayPort-0
+workspace $ws7 output $2kscreen
+workspace $ws11 output $2kscreen
+workspace $ws20 output $2kscreen
+
+workspace $ws1 output $widescreen
+workspace $ws2 output $widescreen
+workspace $ws3 output $widescreen
+workspace $ws4 output $widescreen
+workspace $ws5 output $widescreen
+workspace $ws6 output $widescreen
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
