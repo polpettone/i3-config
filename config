@@ -42,25 +42,21 @@ set $ws18 "18"
 set $ws19 "19"
 set $ws20 "20"
 
-set $widescreen DisplayPort-0
-set $2kscreen DisplayPort-3
-set $4kscreen DisplayPort-1
+set $mainScreen eDPI1
+set $secondScreen HDMI1
 
 
-workspace $ws8 output $4kscreen
-workspace $ws9 output $4kscreen
-workspace $ws10 output $4kscreen
+workspace $ws7 output $secondScreen
+workspace $ws8 output $secondScreen
+workspace $ws9 output $secondScreen
+workspace $ws10 output $secondScreen
 
-workspace $ws7 output $2kscreen
-workspace $ws11 output $2kscreen
-workspace $ws20 output $2kscreen
-
-workspace $ws1 output $widescreen
-workspace $ws2 output $widescreen
-workspace $ws3 output $widescreen
-workspace $ws4 output $widescreen
-workspace $ws5 output $widescreen
-workspace $ws6 output $widescreen
+workspace $ws1 output $mainScreen
+workspace $ws2 output $mainScreen
+workspace $ws3 output $mainScreen
+workspace $ws4 output $mainScreen
+workspace $ws5 output $mainScreen
+workspace $ws6 output $mainScreen
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -186,7 +182,7 @@ mode "resize" {
  
 bindsym $mod+Return exec terminator
 bindsym $mod+Shift+q kill
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec dmenu_run -fn 'Consolas:size=20'
 
 bindsym $mod+w resize set 1280 768
 bindsym $mod+r mode "resize"
@@ -196,7 +192,7 @@ bindsym $mod+s exec --no-startup-id terminator -e 'gnome-screenshot -a'; workspa
 bindsym $mod+a exec --no-startup-id terminator; workspace $ws20
 
 bindsym $mod+t exec ~/.config/i3/scripts/open_terminator.sh
-bindsym $mod+q exec i3lock -ti ~/Pictures/Wallpapers/brake-it.png
+bindsym $mod+q exec i3lock -ti ~/Pictures/mandelbrot_2880x1800.png
 bindsym $mod+c exec ~/.config/i3/scripts/set-local-de.sh
 bindsym $mod+x exec ~/.config/i3/scripts/set-local-us.sh
 
