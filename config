@@ -188,7 +188,7 @@ bindsym $mod+w resize set 1280 768
 bindsym $mod+r mode "resize"
 
 bindsym $mod+b exec --no-startup-id terminator -e 'vim $(mktemp)'; workspace $ws11
-bindsym $mod+s exec --no-startup-id terminator -e 'gnome-screenshot -a'; workspace $ws20
+bindsym $mod+s exec --no-startup-id terminator -e 'gnome-screenshot -a'
 bindsym $mod+a exec --no-startup-id terminator; workspace $ws20
 
 bindsym $mod+t exec ~/.config/i3/scripts/open_terminator.sh
