@@ -192,7 +192,7 @@ bindsym $mod+s exec --no-startup-id terminator -e 'gnome-screenshot -a'; workspa
 bindsym $mod+a exec --no-startup-id terminator; workspace $ws20
 
 bindsym $mod+t exec ~/.config/i3/scripts/open_terminator.sh
-bindsym $mod+q exec i3lock -ti ~/Pictures/mandelbrot_2880x1800.png
+bindsym $mod+q exec i3lock --blur 5 --time-str="%H:%M:%S" --clock
 bindsym $mod+c exec ~/.config/i3/scripts/set-local-de.sh
 bindsym $mod+x exec ~/.config/i3/scripts/set-local-us.sh
 
