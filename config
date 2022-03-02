@@ -33,6 +33,7 @@ set $ws9 "9"
 set $ws10 "10"
 set $wsMisc "42"
 set $wsSearch "43"
+set $wsChat "chat"
 
 set $mainScreen eDPI1
 set $secondScreen HDMI1
@@ -50,6 +51,7 @@ bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 bindsym $mod+m workspace $wsMisc
 bindsym $mod+u workspace $wsSearch
+bindsym $mod+y workspace $wsChat
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -64,6 +66,7 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 bindsym $mod+Shift+m move container to workspace $wsMisc
 bindsym $mod+Shift+u move container to workspace $wsSearch
+bindsym $mod+Shift+y move container to workspace $wsChat
 
 
 # change focus
