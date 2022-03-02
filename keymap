@@ -1,9 +1,15 @@
 q - lock screen                         - kill window
+
 w - change current window size          - empty
+
 e - empty                               - i3 exit
+
 r - resize mode for floating windows    - i3 restart
+
 t - new terminal window in last path    - empty
+
 y - chat workspace                      - move container
+
 u - web search workspace                - move container
 
 i - empty                               - empty
@@ -15,13 +21,17 @@ s - take screenshot                     - empty
 d - dmenu                               - empty 
 f - full screen toggle                  - empty
 g - split horizontal                    - empty
+
 h - focus left                          - move container left
+j - focus up                            - move container up
+k - focus down                          - move container down 
 l - focus right                         - move container right
 
 z - empty                               - empty
 
 x - set local us                        - empty
 c - set local de                        - empty
+
 v - split vertical                      - empty
 
 b - empty                               - empty
