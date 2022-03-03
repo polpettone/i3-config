@@ -31,9 +31,9 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
-set $wsMisc "42"
-set $wsSearch "43"
-set $wsChat "chat"
+set $wsMisc "m:settings"
+set $wsSearch "u:search"
+set $wsChat "y:chat"
 
 set $mainScreen eDPI1
 set $secondScreen HDMI1
