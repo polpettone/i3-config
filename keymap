@@ -12,9 +12,9 @@ y - chat workspace                      - move container
 
 u - web search workspace                - move container
 
-i - empty                               - empty
-o - empty                               - empty 
-p - emtpy                               - empty
+i - idea workspace                      - move container
+o - code workspace                      - move container
+p - settings workspace                  - move container
 
 a - empty                               - kill all 
 s - take screenshot                     - empty
@@ -34,7 +34,6 @@ c - set local de                        - empty
 
 v - split vertical                      - empty
 
-b - empty                               - empty
+b - slack worspace                      - move container
 n - empty                               - empty
-
-m - settings workspace                  - move container
+m - metrics workspace                   - move container

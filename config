@@ -31,9 +31,16 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
-set $wsMisc "m:settings"
-set $wsSearch "u:search"
+
+
 set $wsChat "y:chat"
+set $wsSearch "u:search"
+set $wsIdea "i:idea"
+set $wsCode "o:code"
+set $wsSettings "p:settings"
+
+set $wsMetrics "m:metrics"
+set $wsSlack "b:slack"
 
 set $mainScreen eDPI1
 set $secondScreen HDMI1
@@ -49,9 +56,15 @@ bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
-bindsym $mod+m workspace $wsMisc
-bindsym $mod+u workspace $wsSearch
+
 bindsym $mod+y workspace $wsChat
+bindsym $mod+u workspace $wsSearch
+bindsym $mod+i workspace $wsIdea
+bindsym $mod+o workspace $wsCode
+bindsym $mod+p workspace $wsSettings
+
+bindsym $mod+m workspace $wsMetrics
+bindsym $mod+b workspace $wsSlack
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -64,9 +77,15 @@ bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
-bindsym $mod+Shift+m move container to workspace $wsMisc
-bindsym $mod+Shift+u move container to workspace $wsSearch
+
 bindsym $mod+Shift+y move container to workspace $wsChat
+bindsym $mod+Shift+u move container to workspace $wsSearch
+bindsym $mod+Shift+i move container to workspace $wsIdea
+bindsym $mod+Shift+o move container to workspace $wsCode
+bindsym $mod+Shift+p move container to workspace $wsSettings
+
+bindsym $mod+Shift+m move container to workspace $wsMetrics
+bindsym $mod+Shift+b move container to workspace $wsSlack
 
 
 # change focus
