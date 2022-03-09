@@ -38,8 +38,9 @@ set $wsIdea "i:idea"
 set $wsCode "o:code"
 set $wsSettings "p:settings"
 
+set $wsBrowse "b:browser"
 set $wsMetrics "m:metrics"
-set $wsSlack "b:slack"
+set $wsSlack "n:slack"
 
 set $mainScreen eDPI1
 set $secondScreen HDMI1
@@ -62,8 +63,9 @@ bindsym $mod+i workspace $wsIdea
 bindsym $mod+o workspace $wsCode
 bindsym $mod+p workspace $wsSettings
 
+bindsym $mod+b workspace $wsBrowser
+bindsym $mod+n workspace $wsSlack
 bindsym $mod+m workspace $wsMetrics
-bindsym $mod+b workspace $wsSlack
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -83,8 +85,9 @@ bindsym $mod+Shift+i move container to workspace $wsIdea
 bindsym $mod+Shift+o move container to workspace $wsCode
 bindsym $mod+Shift+p move container to workspace $wsSettings
 
+bindsym $mod+Shift+b move container to workspace $wsBrowser
+bindsym $mod+Shift+n move container to workspace $wsSlack
 bindsym $mod+Shift+m move container to workspace $wsMetrics
-bindsym $mod+Shift+b move container to workspace $wsSlack
 
 
 # change focus

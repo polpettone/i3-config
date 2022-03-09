@@ -9,9 +9,7 @@ r - resize mode for floating windows    - i3 restart
 t - new terminal window in last path    - empty
 
 y - chat workspace                      - move container
-
 u - web search workspace                - move container
-
 i - idea workspace                      - move container
 o - code workspace                      - move container
 p - settings workspace                  - move container
@@ -34,6 +32,6 @@ c - set local de                        - empty
 
 v - split vertical                      - empty
 
-b - slack worspace                      - move container
-n - empty                               - empty
+b - browser workspace                   - move container
+n - slack workspace                     - move container  
 m - metrics workspace                   - move container
