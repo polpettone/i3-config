@@ -38,7 +38,7 @@ set $wsIdea "i:idea"
 set $wsCode "o:code"
 set $wsSettings "p:settings"
 
-set $wsBrowse "b:browser"
+set $wsBrowser "b:browser"
 set $wsMetrics "m:metrics"
 set $wsSlack "n:slack"
 
