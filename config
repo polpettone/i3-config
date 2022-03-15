@@ -32,11 +32,11 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-set $wsChat "y:chat"
+set $wsChat "c:chat"
 set $wsSearch "u:search"
 set $wsIdea "i:idea"
 set $wsCode "o:code"
-set $wsSettings "p:settings"
+set $wsSettings "s:settings"
 
 set $wsBrowser "b:browser"
 set $wsMetrics "m:metrics"
@@ -57,11 +57,11 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
-bindsym $mod+y workspace $wsChat
+bindsym $mod+c workspace $wsChat
 bindsym $mod+u workspace $wsSearch
 bindsym $mod+i workspace $wsIdea
 bindsym $mod+o workspace $wsCode
-bindsym $mod+p workspace $wsSettings
+bindsym $mod+s workspace $wsSettings
 
 bindsym $mod+b workspace $wsBrowser
 bindsym $mod+n workspace $wsSlack
@@ -79,11 +79,11 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
-bindsym $mod+Shift+y move container to workspace $wsChat
+bindsym $mod+Shift+c move container to workspace $wsChat
 bindsym $mod+Shift+u move container to workspace $wsSearch
 bindsym $mod+Shift+i move container to workspace $wsIdea
 bindsym $mod+Shift+o move container to workspace $wsCode
-bindsym $mod+Shift+p move container to workspace $wsSettings
+bindsym $mod+Shift+s move container to workspace $wsSettings
 
 bindsym $mod+Shift+b move container to workspace $wsBrowser
 bindsym $mod+Shift+n move container to workspace $wsSlack
@@ -117,8 +117,6 @@ bindsym $mod+Shift+space floating toggle
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
-# reload the configuration file
-bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
@@ -158,11 +156,11 @@ bindsym $mod+Shift+a [class=".*"] kill
 bindsym $mod+w resize set 1280 768
 bindsym $mod+r mode "resize"
 
-bindsym $mod+s exec --no-startup-id terminator -e 'gnome-screenshot -a'
+bindsym $mod+p exec --no-startup-id terminator -e 'gnome-screenshot -a'
 
 bindsym $mod+t exec ~/.config/i3/scripts/open_terminator.sh
 bindsym $mod+q exec i3lock --blur 5 --time-str="%H:%M:%S" --clock
-bindsym $mod+c exec ~/.config/i3/scripts/set-local-de.sh
-bindsym $mod+x exec ~/.config/i3/scripts/set-local-us.sh
+bindsym $mod+z exec ~/.config/i3/scripts/set-local-de.sh
+bindsym $mod+y exec ~/.config/i3/scripts/set-local-us.sh
 
 

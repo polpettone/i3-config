@@ -8,14 +8,15 @@ r - resize mode for floating windows    - i3 restart
 
 t - new terminal window in last path    - empty
 
-y - chat workspace                      - move container
+y - set local us                        - empty
+
 u - web search workspace                - move container
 i - idea workspace                      - move container
+p - take screenshot                     - empty
 o - code workspace                      - move container
-p - settings workspace                  - move container
 
 a - empty                               - kill all 
-s - take screenshot                     - empty
+s - settings workspace                  - move container
 d - dmenu                               - empty 
 f - full screen toggle                  - empty
 g - split horizontal                    - empty
@@ -25,10 +26,10 @@ j - focus up                            - move container up
 k - focus down                          - move container down 
 l - focus right                         - move container right
 
-z - empty                               - empty
+z - set local de                        - empty
 
-x - set local us                        - empty
-c - set local de                        - empty
+x - empty                               - empty
+c - chat workspace                      - move container
 
 v - split vertical                      - empty
 
