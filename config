@@ -34,14 +34,14 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-set $wsChat "c:chat"
+set $wsChat "c:chat/zoom"
 set $wsSearch "u:search"
 set $wsIdea "i:idea"
 set $wsCode "o:code"
 set $wsSettings "s:settings"
 
 set $wsBrowser "b:browser"
-set $wsMetrics "m:metrics"
+set $wsExec "m:exec"
 set $wsSlack "n:slack"
 
 set $mainScreen eDPI1
@@ -67,7 +67,7 @@ bindsym $mod+s workspace $wsSettings
 
 bindsym $mod+b workspace $wsBrowser
 bindsym $mod+n workspace $wsSlack
-bindsym $mod+m workspace $wsMetrics
+bindsym $mod+m workspace $wsExec
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -89,7 +89,7 @@ bindsym $mod+Shift+s move container to workspace $wsSettings
 
 bindsym $mod+Shift+b move container to workspace $wsBrowser
 bindsym $mod+Shift+n move container to workspace $wsSlack
-bindsym $mod+Shift+m move container to workspace $wsMetrics
+bindsym $mod+Shift+m move container to workspace $wsExec
 
 
 # cursor
