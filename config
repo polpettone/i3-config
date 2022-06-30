@@ -7,6 +7,8 @@ floating_modifier $mod
 exec_always --no-startup-id xmodmap -e "clear lock"
 exec_always --no-startup-id xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock"
 exec_always --no-startup-id xmodmap -e "keycode 66 = Escape NoSymbol Escape"
+
+
 exec_always ~/.config/start_home_setup.sh 
 
 exec_always guake
@@ -14,7 +16,7 @@ exec_always guake
 font pango:monospace 8
 
 gaps inner 20 
-gaps outer 1
+gaps outer 5
 
 # disable title bar of all windows
 for_window [class="^.*"] border pixel 1
@@ -90,17 +92,24 @@ bindsym $mod+Shift+n move container to workspace $wsSlack
 bindsym $mod+Shift+m move container to workspace $wsMetrics
 
 
+# cursor
+#TODO: how to bind to cursor keys?
+#bindsym $mod+h left
+#bindsym $mod+j down
+#bindsym $mod+k up
+#bindsym $mod+l right
+
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+bindsym $mod+Shift+h focus left
+bindsym $mod+Shift+j focus down
+bindsym $mod+Shift+k focus up
+bindsym $mod+Shift+l focus right
 
 # move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+bindsym $mod+Shift+Ctrl+h move left
+bindsym $mod+Shift+Ctrl+j move down
+bindsym $mod+Shift+Ctrl+k move up
+bindsym $mod+Shift+Ctrl+l move right
 
 # split in horizontal orientation
 bindsym $mod+g split h
@@ -153,7 +162,7 @@ bindsym $mod+d exec dmenu_run -fn 'Consolas:size=20'
 
 bindsym $mod+Shift+a [class=".*"] kill
 
-bindsym $mod+w resize set 1280 768
+bindsym $mod+w resize set 1000 768
 bindsym $mod+r mode "resize"
 
 bindsym $mod+p exec --no-startup-id terminator -e 'gnome-screenshot -a'
@@ -162,5 +171,12 @@ bindsym $mod+t exec ~/.config/i3/scripts/open_terminator.sh
 bindsym $mod+q exec i3lock --blur 5 --time-str="%H:%M:%S" --clock
 bindsym $mod+z exec ~/.config/i3/scripts/set-local-de.sh
 bindsym $mod+y exec ~/.config/i3/scripts/set-local-us.sh
+
+
+bindsym $mod+x exec ~/bin/open_terminal.sh
+
+
+
+
 
 
