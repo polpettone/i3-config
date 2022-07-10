@@ -169,8 +169,8 @@ bindsym $mod+p exec --no-startup-id terminator -e 'gnome-screenshot -a'
 
 bindsym $mod+t exec ~/.config/i3/scripts/open_terminator.sh
 bindsym $mod+q exec i3lock --blur 5 --time-str="%H:%M:%S" --clock
-bindsym $mod+z exec ~/.config/i3/scripts/set-local-de.sh
-bindsym $mod+y exec ~/.config/i3/scripts/set-local-us.sh
+bindsym $mod+y exec ~/.config/i3/scripts/set-local-de.sh
+bindsym $mod+z exec ~/.config/i3/scripts/set-local-us.sh
 
 
 bindsym $mod+x exec ~/bin/open_terminal.sh
