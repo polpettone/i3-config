@@ -4,7 +4,7 @@ set $mod Mod4
 floating_modifier $mod
 
 # change ESC with CAPS_LOCK
-exec_always --no-startup-id xmodmap ~/.config/i3/.Xmodmap
+exec_always --no-startup-id xmodmap ~/.config/i3/Xmodmap
 
 exec_always ~/.config/start_home_setup.sh 
 
