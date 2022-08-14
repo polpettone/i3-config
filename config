@@ -38,8 +38,10 @@ set $wsCode "o:code"
 set $wsSettings "s:settings"
 
 set $wsBrowser "b:browser"
-set $wsExec "m:exec"
+set $wsExec "x:exec"
 set $wsSlack "n:slack"
+
+set $wsTodos "z:todos"
 
 set $mainScreen eDPI1
 set $secondScreen HDMI1
@@ -64,7 +66,10 @@ bindsym $mod+s workspace $wsSettings
 
 bindsym $mod+b workspace $wsBrowser
 bindsym $mod+n workspace $wsSlack
-bindsym $mod+m workspace $wsExec
+bindsym $mod+x workspace $wsExec
+
+bindsym $mod+z workspace $wsTodos
+
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -86,15 +91,10 @@ bindsym $mod+Shift+s move container to workspace $wsSettings
 
 bindsym $mod+Shift+b move container to workspace $wsBrowser
 bindsym $mod+Shift+n move container to workspace $wsSlack
-bindsym $mod+Shift+m move container to workspace $wsExec
+bindsym $mod+Shift+x move container to workspace $wsExec
 
+bindsym $mod+Shift+z move container to workspace $wsTodos
 
-# cursor
-#TODO: how to bind to cursor keys?
-#bindsym $mod+h left
-#bindsym $mod+j down
-#bindsym $mod+k up
-#bindsym $mod+l right
 
 # change focus
 bindsym $mod+Shift+h focus left
@@ -166,14 +166,5 @@ bindsym $mod+p exec --no-startup-id terminator -e 'gnome-screenshot -a'
 
 bindsym $mod+t exec ~/.config/i3/scripts/open_terminator.sh
 bindsym $mod+q exec i3lock --blur 5 --time-str="%H:%M:%S" --clock
-bindsym $mod+y exec ~/.config/i3/scripts/set-local-de.sh
-bindsym $mod+z exec ~/.config/i3/scripts/set-local-us.sh
-
-
-bindsym $mod+x exec ~/bin/open_terminal.sh
-
-
-
-
 
 
