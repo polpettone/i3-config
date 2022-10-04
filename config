@@ -3,6 +3,13 @@ set $mod Mod4
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+
+exec_always --no-startup-id clipcatd                # start clipcatd at startup
+
+set $launcher-clipboard-insert clipcat-menu insert
+set $launcher-clipboard-remove clipcat-menu remove
+
+
 # change ESC with CAPS_LOCK
 exec_always --no-startup-id xmodmap ~/.config/i3/Xmodmap
 
