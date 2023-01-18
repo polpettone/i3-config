@@ -4,8 +4,6 @@ set $mod Mod4
 floating_modifier $mod
 
 
-exec_always --no-startup-id clipcatd                # start clipcatd at startup
-
 set $launcher-clipboard-insert clipcat-menu insert
 set $launcher-clipboard-remove clipcat-menu remove
 
@@ -145,10 +143,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 30 px or 30 ppt
-        bindsym k resize grow height 30 px or 30 ppt
-        bindsym l resize shrink height 30 px or 30 ppt
-        bindsym odiaeresis resize grow width 30 px or 30 ppt
+        bindsym h resize shrink width 30 px or 30 ppt
+        bindsym j resize grow height 30 px or 30 ppt
+        bindsym k resize shrink height 30 px or 30 ppt
+        bindsym l resize grow width 30 px or 30 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 30 px or 30 ppt
