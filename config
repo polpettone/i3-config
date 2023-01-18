@@ -13,8 +13,6 @@ set $launcher-clipboard-remove clipcat-menu remove
 # change ESC with CAPS_LOCK
 exec_always --no-startup-id xmodmap ~/.config/i3/Xmodmap
 
-exec_always ~/.config/start_home_setup.sh 
-
 exec_always guake
 
 font pango:monospace 8
@@ -170,7 +168,7 @@ bindsym $mod+d exec dmenu_run -fn 'Consolas:size=20'
 
 bindsym $mod+Shift+a [class=".*"] kill
 
-bindsym $mod+w resize set 1000 768
+bindsym $mod+w resize set 2000 1200
 bindsym $mod+r mode "resize"
 
 bindsym $mod+p exec --no-startup-id terminator -e 'gnome-screenshot -a'
