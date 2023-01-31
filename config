@@ -15,8 +15,8 @@ exec_always guake
 
 font pango:monospace 8
 
-gaps inner 20 
-gaps outer 5
+gaps inner 40 
+gaps outer 30
 
 # disable title bar of all windows
 for_window [class="^.*"] border pixel 1
@@ -175,7 +175,7 @@ bindsym $mod+t exec ~/.config/i3/scripts/open_terminator.sh
 bindsym $mod+q exec i3lock --blur 5 --time-str="%H:%M:%S" --clock
 
 
-client.focused  #ff0000 #ff0000 #ff0000 #ff0000
+client.focused  #41ff05 #41ff05 #41ff05 #41ff05
 
 focus_follows_mouse no
 
