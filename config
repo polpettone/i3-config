@@ -19,7 +19,7 @@ gaps inner 40
 gaps outer 30
 
 # disable title bar of all windows
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 0
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
