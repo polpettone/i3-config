@@ -3,13 +3,7 @@ set $mod Mod4
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-
-set $launcher-clipboard-insert clipcat-menu insert
-set $launcher-clipboard-remove clipcat-menu remove
-
-
-# change ESC with CAPS_LOCK
-exec_always --no-startup-id xmodmap ~/.config/i3/Xmodmap
+exec_always ~/.config/screen-setups/singel_screen.sh
 
 exec_always guake
 
@@ -46,8 +40,8 @@ set $wsSlack "n:slack"
 
 set $wsTodos "z:todos"
 
-set $mainScreen eDPI1
-set $secondScreen HDMI1
+set $mainScreen DisplayPort-0
+set $secondScreen HDMI-A-0
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -160,20 +154,24 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-bindsym $mod+Return exec terminator
+bindsym $mod+Return exec terminator && ~/.config/polybar/material/scripts/pywal.sh ~/Pictures/wallpaper 
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec dmenu_run -fn 'Consolas:size=20'
 
 bindsym $mod+Shift+a [class=".*"] kill
 
-bindsym $mod+w resize set 2000 1200
+bindsym $mod+w resize set 1200 700
 bindsym $mod+r mode "resize"
 
-bindsym $mod+p exec --no-startup-id terminator -e 'gnome-screenshot -a'
+bindsym $mod+m move container position 2000 300
 
-bindsym $mod+t exec ~/.config/i3/scripts/open_terminator.sh
-bindsym $mod+q exec i3lock --blur 5 --time-str="%H:%M:%S" --clock
+bindsym $mod+p exec --no-startup-id terminator -e 'ping google.de'
 
+bindsym $mod+t exec ~/.config/i3/scripts/open_terminator.sh 
+
+bindsym $mod+q exec i3lock -i ~/Pictures/earth.png
+
+for_window [window_role="^floating$"] floating enable
 
 client.focused  #41ff05 #41ff05 #41ff05 #41ff05
 
