@@ -3,14 +3,12 @@ set $mod Mod4
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-exec_always ~/.config/screen-setups/singel_screen.sh
-
 exec_always guake
 
 font pango:monospace 8
 
-gaps inner 40 
-gaps outer 30
+gaps inner 20 
+gaps outer 20
 
 # disable title bar of all windows
 for_window [class="^.*"] border pixel 0
@@ -154,7 +152,8 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-bindsym $mod+Return exec terminator && ~/.config/polybar/material/scripts/pywal.sh ~/Pictures/wallpaper 
+bindsym $mod+Return exec terminator 
+
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec dmenu_run -fn 'Consolas:size=20'
 
@@ -169,7 +168,7 @@ bindsym $mod+p exec --no-startup-id terminator -e 'ping google.de'
 
 bindsym $mod+t exec ~/.config/i3/scripts/open_terminator.sh 
 
-bindsym $mod+q exec i3lock -i ~/Pictures/earth.png
+bindsym $mod+q exec i3lock -i ~/Pictures/wallpapers/bg_14.png
 
 for_window [window_role="^floating$"] floating enable
 
