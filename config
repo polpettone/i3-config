@@ -26,7 +26,7 @@ set $ws8 "8:AI"
 set $ws9 "9"
 set $ws10 "10"
 
-set $wsChat "c:chat/zoom"
+set $wsChat "c:chat"
 set $wsSearch "u:search"
 set $wsIdea "i:idea"
 set $wsCode "o:code"
@@ -34,7 +34,7 @@ set $wsSettings "s:settings"
 
 set $wsBrowser "b:browser"
 set $wsExec "x:exec"
-set $wsSlack "n:slack"
+set $wsSlack "n:system"
 
 set $wsTodos "z:todos"
 
@@ -64,6 +64,9 @@ bindsym $mod+n workspace $wsSlack
 bindsym $mod+x workspace $wsExec
 
 bindsym $mod+z workspace $wsTodos
+
+
+# p and y are still free
 
 
 # move focused container to workspace
@@ -123,6 +126,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
@@ -163,8 +167,6 @@ bindsym $mod+w resize set 1200 700
 bindsym $mod+r mode "resize"
 
 bindsym $mod+m move container position 2000 300
-
-bindsym $mod+p exec --no-startup-id terminator -e 'ping google.de'
 
 bindsym $mod+t exec ~/.config/i3/scripts/open_terminator.sh 
 
