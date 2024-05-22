@@ -8,7 +8,7 @@ exec_always guake
 font pango:monospace 8
 
 gaps inner 20 
-gaps outer 100
+gaps outer 20
 
 # disable title bar of all windows
 for_window [class="^.*"] border pixel 0
@@ -28,7 +28,8 @@ set $ws10 "10"
 
 set $wsChat "c:chat"
 set $wsSearch "u:search"
-set $wsIdea "i:idea"
+set $wsNotes "i:notes"
+
 set $wsCode "o:code"
 set $wsSettings "s:settings"
 
@@ -55,7 +56,9 @@ bindsym $mod+0 workspace $ws10
 
 bindsym $mod+c workspace $wsChat
 bindsym $mod+u workspace $wsSearch
-bindsym $mod+i workspace $wsIdea
+
+bindsym $mod+i workspace $wsNotes
+
 bindsym $mod+o workspace $wsCode
 bindsym $mod+s workspace $wsSettings
 
@@ -83,7 +86,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 bindsym $mod+Shift+c move container to workspace $wsChat
 bindsym $mod+Shift+u move container to workspace $wsSearch
-bindsym $mod+Shift+i move container to workspace $wsIdea
+bindsym $mod+Shift+i move container to workspace $wsNotes
 bindsym $mod+Shift+o move container to workspace $wsCode
 bindsym $mod+Shift+s move container to workspace $wsSettings
 
