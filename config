@@ -31,7 +31,7 @@ set $wsSearch "u:search"
 set $wsNotes "i:notes"
 
 set $wsCode "o:code"
-set $wsSettings "s:settings"
+set $wsSettings "s:tmux"
 
 set $wsBrowser "b:browser"
 set $wsExec "x:exec"
