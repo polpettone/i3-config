@@ -161,10 +161,9 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-bindsym $mod+Return exec terminator 
+bindsym $mod+Return exec wezterm 
 
 bindsym $mod+Shift+q kill
-bindsym $mod+d exec dmenu_run -fn 'Consolas:size=20'
 
 bindsym $mod+w resize set 1200 700
 bindsym $mod+r mode "resize"
