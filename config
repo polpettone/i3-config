@@ -151,9 +151,10 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-bindsym $mod+Return exec wezterm 
-
+bindsym $mod+Return exec wezterm
 bindsym $mod+Shift+q kill
+bindsym $mod+m exec rofi -show run
+
 
 bindsym $mod+w resize set 1200 700
 bindsym $mod+r mode "resize"
