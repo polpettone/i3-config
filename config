@@ -153,15 +153,13 @@ mode "resize" {
 
 bindsym $mod+Return exec wezterm
 bindsym $mod+Shift+q kill
-bindsym $mod+m exec rofi -show run
-
 
 bindsym $mod+w resize set 1200 700
 bindsym $mod+r mode "resize"
 
 bindsym $mod+m exec rofi -show run
 
-bindsym $mod+q exec i3lock -i ~/Pictures/wallpapers/bg_14.png
+bindsym $mod+q exec i3lock
 
 for_window [window_role="^floating$"] floating enable
 
