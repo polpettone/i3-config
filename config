@@ -27,8 +27,8 @@ set $ws9 "9"
 set $ws10 "10"
 
 set $wsChat "c:chat"
-set $wsSearch "u:search"
-set $wsNotes "i:notes"
+set $wsSearch "u:devB-0"
+set $wsNotes "i:devB-1"
 
 set $wsCode "o:code"
 set $wsSettings "s:tmux"
