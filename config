@@ -151,7 +151,7 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-bindsym $mod+Return exec wezterm
+bindsym $mod+Return exec kitty
 bindsym $mod+Shift+q kill
 
 bindsym $mod+w resize set 1200 700
